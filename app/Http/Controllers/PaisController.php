@@ -44,9 +44,9 @@ class PaisController extends Controller
      * @param  \App\Models\Pais  $pais
      * @return \Illuminate\Http\Response
      */
-    public function show($id_pais)
+    public function show($codigo_iso)
     {
-        $mostrar_pais = Pais::where('codigo_iso', $id_pais)->first();
+        $mostrar_pais = Pais::where('codigo_iso', $codigo_iso)->first();
 
         return response()->json([
             'res'     => true,
